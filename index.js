@@ -63,7 +63,7 @@ const zooAnimals = [
   */
 
   function animalNames(zooAnimals){
-    let names = []
+    let names = [];
     zooAnimals.forEach(item =>{
       names.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
     })
@@ -90,7 +90,8 @@ const zooAnimals = [
   */
 
  function lowPopulationAnimals(zooAnimals){
-
+  let lowPop = zooAnimals.filter(item=>item.population<5);
+  return lowPop;
 
 }
 //I can't always tell when it's an NPM problem, but the lowpop function appears to work in codepen just fine...unless I'm returning in the information incorrectly here?
@@ -202,8 +203,11 @@ const cuboid = new CuboidMaker({length: 4,width: 5,height: 5});
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
-class CuboidMakerTwo{
-
+class CuboidMakerTwo extends CuboidMaker{
+  constructor(values){
+    super(values);
+  
+  }
 }
 
 
@@ -217,8 +221,19 @@ class CuboidMakerTwo{
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
   
+// class CubeMaker extends CuboidMaker {
+//   constructor(values){
+//     super(values);
 
-
+//     CubeMaker.prototype.volume = function(values){
+//       return Math.pow(this.length,3);
+//     };
+//     CuboidMaker.prototype.surfaceArea = function(values){
+//       return (6*(Math.pow(this.length,2))
+//     };
+//   }
+// }
+// something along those lines!
 
 
 
