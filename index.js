@@ -2,8 +2,6 @@
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
 
-//making some changes to confirm codegrade is functional!!
-//ch ch ch changesssssss
 
 const external = "I'm outside the function";
 
@@ -20,7 +18,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// Closure and scope- the nested function has access to all the same things as it's parent function, however myFunction would have no access to any variables inside nestedFunction
 
 
 
